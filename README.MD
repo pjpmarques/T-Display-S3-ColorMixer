@@ -27,6 +27,10 @@ There are some images of the project:
 |---|---|
 | ![Blue](img/blue.jpeg)  | ![Decomp](img/decomp.jpeg)  |
 
+Video from the project:
+
+![Demo](img/demo.mov)
+
 ## How to compile and run
 
 Make sure you do the proper connections as described in the section above. 
