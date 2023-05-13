@@ -57,41 +57,32 @@ void drawColorMixer() {
     uint16_t color;
 
     // RED circle
-
-    sprite.fillCircle(tft.width()/2, tft.height()*2/10, RADIUS, TFT_BLACK);    
-
     hslToRgb(0.0, 1.0, 0.5f*red/SCALE, r, g, b);
     color = tft.color565(r, g, b);
+    sprite.fillCircle(tft.width()/2, tft.height()*2/20, RADIUS, TFT_BLACK);    
     sprite.fillCircle(tft.width()/2, tft.height()*2/20, RADIUS, color);
     sprite.drawCircle(tft.width()/2, tft.height()*2/20, RADIUS, TFT_RED);
     
     // GREEN circle
-    
-    sprite.fillCircle(tft.width()/2, tft.height()*7/20, RADIUS, TFT_BLACK);
-    
     hslToRgb(120.0, 1.0, 0.5f*green/SCALE, r, g, b);
     color = tft.color565(r, g, b);
+    sprite.fillCircle(tft.width()/2, tft.height()*7/20, RADIUS, TFT_BLACK);
     sprite.fillCircle(tft.width()/2, tft.height()*7/20, RADIUS, color);
     sprite.drawCircle(tft.width()/2, tft.height()*7/20, RADIUS, TFT_GREEN);
 
     // BLUE circle
-    
-    sprite.fillCircle(tft.width()/2, tft.height()*12/20, RADIUS, TFT_BLACK);
-    
     hslToRgb(240.0, 1.0, 0.5f*blue/SCALE, r, g, b);
     color = tft.color565(r, g, b);
+    sprite.fillCircle(tft.width()/2, tft.height()*12/20, RADIUS, TFT_BLACK);
     sprite.fillCircle(tft.width()/2, tft.height()*12/20, RADIUS, color);
     sprite.drawCircle(tft.width()/2, tft.height()*12/20, RADIUS, TFT_BLUE);
 
-    // The adding of RED, GREEN and BLUE circle
-    
+    // The adding of RED, GREEN and BLUE circle    
     sprite.fillCircle(tft.width()/2, tft.height()*17/20, RADIUS, TFT_BLACK);
     color = tft.color565((uint8_t)(255.0 * red/SCALE), (uint8_t)(255.0 * green/SCALE), (uint8_t)(255.0 * blue/SCALE));
     sprite.fillCircle(tft.width()/2, tft.height()*17/20, RADIUS, color);
 
-    // ---------
-
-    // Actually draw it
+    // Actually draw the screen
     sprite.pushSprite(0, 0);
 }
 
